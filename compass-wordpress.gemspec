@@ -14,23 +14,23 @@ Gem::Specification.new do |s|
   s.email = %q{wynn.netherland@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
-     "README.rdoc"
+     "README.markdown"
   ]
   s.files = [
     "LICENSE",
-     "README.rdoc",
+     "README.markdown",
      "Rakefile",
      "VERSION",
      "lib/compass-wordpress.rb",
      "lib/wordpress/compass_extension.rb",
-     "sass/thematic/_extensions.sass",
-     "sass/thematic/_styles.sass",
-     "sass/thematic/extensions/_typography.sass",
-     "sass/thematic/styles/_2c_r_fixed.sass",
-     "sass/thematic/styles/_default.sass",
-     "sass/thematic/styles/_images.sass",
-     "sass/thematic/styles/_plugins.sass",
-     "sass/thematic/styles/_typography.sass",
+     "sass/wordpress/thematic/_extensions.sass",
+     "sass/wordpress/thematic/_styles.sass",
+     "sass/wordpress/thematic/extensions/_typography.sass",
+     "sass/wordpress/thematic/styles/_2c_r_fixed.sass",
+     "sass/wordpress/thematic/styles/_default.sass",
+     "sass/wordpress/thematic/styles/_images.sass",
+     "sass/wordpress/thematic/styles/_plugins.sass",
+     "sass/wordpress/thematic/styles/_typography.sass",
      "templates/project/manifest.rb",
      "templates/project/print.sass",
      "templates/project/readme.txt",
