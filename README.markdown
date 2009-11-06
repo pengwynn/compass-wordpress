@@ -10,11 +10,15 @@ Installing
 
 To install a theme into your existing compass project, add the following to your compass configuration file:
 
-    require 'compass-colors'
+    require 'compass-wordpress'
 
-Then run this command:
+OR, just run this command:
 
-    compass -r compass-wordpress -f wordpress -p --sass-dir=sass --css-dir=css -s compressed <Theme Name>
+    compass -r compass-wordpress -f wordpress --sass-dir=sass --css-dir=css -s compressed -p <Theme Name>
+
+What this does is call `compass`, requires the compass-wordpress extension, uses the framework wordpress, sets the sass and css directories, sets the Sass output to be compressed and finally ends with you setting the theme name.
+
+** As of this version, we only have support for Thematic developed. Suggest one to use, or fork the project and take a stab at it yourself. Either way, get in touch we want to hear from you.
     
 Supported Theme Options
 ========================
