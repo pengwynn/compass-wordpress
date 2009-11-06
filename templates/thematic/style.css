@@ -1,0 +1,20 @@
+/*   
+Theme Name: A Thematic Child Theme
+Theme URI: 
+Description: Use this theme to start your Thematic Child Theme development.
+Author: Ian Stewart
+Author URI: http://themeshaper.com/
+Template: thematic
+Version: 1.0
+Tags: Thematic
+.
+Thematic is © Ian Stewart http://themeshaper.com/
+.
+*/
+
+/* 
+  if you passed diff compass folder options,
+ change these to match your compiled css folder  */
+@import url('stylesheets/screen.css') screen;
+@import url('stylesheets/print.css') print;
+
