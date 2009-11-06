@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland", "Adam Stacoviak"]
   s.date = %q{2009-11-05}
-  s.description = %q{}
+  s.description = %q{Helps you create generic themes or Thematic child themes}
   s.email = %q{wynn.netherland@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -23,20 +23,36 @@ Gem::Specification.new do |s|
      "VERSION",
      "lib/compass-wordpress.rb",
      "lib/wordpress/compass_extension.rb",
-     "sass/thematic/_2c_r_fixed.sass",
-     "sass/thematic/_images.sass",
-     "sass/thematic/_plugins.sass",
-     "sass/thematic/_typography.sass",
-     "templates/project/css/screen.css",
+     "sass/wordpress/_library.sass",
+     "sass/wordpress/library/_border_radius.sass",
+     "sass/wordpress/library/_button_style.sass",
+     "sass/wordpress/library/_clearfix.sass",
+     "sass/wordpress/library/_easy_box_shadow.sass",
+     "sass/wordpress/library/_float.sass",
+     "sass/wordpress/library/_gradient.sass",
+     "sass/wordpress/library/_hacks.sass",
+     "sass/wordpress/library/_link_colors.sass",
+     "sass/wordpress/library/_list_borders.sass",
+     "sass/wordpress/library/_opacity.sass",
+     "sass/wordpress/library/_reset.sass",
+     "sass/wordpress/library/_sprite_hover.sass",
+     "sass/wordpress/library/_sprite_img.sass",
+     "sass/wordpress/library/_typography.sass",
+     "sass/wordpress/thematic/_2c_r_fixed.sass",
+     "sass/wordpress/thematic/_default.sass",
+     "sass/wordpress/thematic/_images.sass",
+     "sass/wordpress/thematic/_plugins.sass",
+     "sass/wordpress/thematic/_typography.sass",
      "templates/project/manifest.rb",
+     "templates/project/print.sass",
      "templates/project/readme.txt",
-     "templates/project/sass/screen.sass",
+     "templates/project/screen.sass",
      "templates/project/style.css",
-     "templates/thematic/css/screen.css",
      "templates/thematic/functions.php",
      "templates/thematic/manifest.rb",
+     "templates/thematic/print.sass",
      "templates/thematic/readme.txt",
-     "templates/thematic/sass/screen.sass",
+     "templates/thematic/screen.sass",
      "templates/thematic/style.css"
   ]
   s.homepage = %q{http://github.com/pengwynn/compass-wordpress}
