@@ -14,7 +14,7 @@ To install a theme into your existing compass project, add the following to your
 
 OR, just run this command:
 
-    compass -r compass-wordpress -f wordpress --sass-dir=sass --css-dir=css -s compressed -p <Theme Name>
+    compass -r compass-wordpress -f wordpress --sass-dir=sass --css-dir=css -s compressed -p <Theme Name> /path/to/installation
 
 What this does is call `compass`, requires the compass-wordpress extension, uses the framework wordpress, sets the sass and css directories, sets the Sass output to be compressed and finally ends with you setting the theme name.
 
