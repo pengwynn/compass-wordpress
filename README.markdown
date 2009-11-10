@@ -6,6 +6,12 @@ This Compass extension provides support for creating WordPress Themes and workin
 Installing
 ==========
 
+Assuming you don't have Haml or Compass installed.
+
+    sudo gem install gemcutter
+    gem tumble
+    sudo gem haml
+    sudo gem install compass
     sudo gem install compass-wordpress
 
 To install a theme into your existing compass project, add the following to your compass configuration file:
