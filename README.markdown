@@ -24,7 +24,7 @@ OR, just run this command:
 
 What this does is call `compass`, requires the compass-wordpress extension, uses the framework wordpress, sets the sass and css directories, sets the Sass output to be compressed and finally ends with you setting the theme name.
 
-Read more details at Wynn's blog: http://wynnnetherland.com/2009/11/sass-up-your-wordpress-themes-with-compass/
+Read more details at [Wynn's blog](http://wynnnetherland.com/2009/11/sass-up-your-wordpress-themes-with-compass/).
 
 ** As of this version, we only have support for Thematic developed. Suggest one to use, or fork the project and take a stab at it yourself. Either way, get in touch we want to hear from you.
     
