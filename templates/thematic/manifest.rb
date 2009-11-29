@@ -1,3 +1,4 @@
+file 'Rakefile'
 file 'style.css'
 file 'readme.txt'
 file 'functions.php'
