@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland", "Adam Stacoviak"]
-  s.date = %q{2009-11-29}
+  s.date = %q{2009-11-30}
   s.description = %q{Helps you create generic WordPress themes and Thematic child themes}
   s.email = %q{wynn.netherland@gmail.com}
   s.extra_rdoc_files = [
