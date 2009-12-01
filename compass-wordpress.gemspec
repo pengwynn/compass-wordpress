@@ -35,13 +35,11 @@ Gem::Specification.new do |s|
      "sass/wordpress/thematic/styles/_images.sass",
      "sass/wordpress/thematic/styles/_plugins.sass",
      "sass/wordpress/thematic/styles/_typography.sass",
-     "templates/project/Rakefile",
      "templates/project/manifest.rb",
      "templates/project/print.sass",
      "templates/project/readme.txt",
      "templates/project/screen.sass",
      "templates/project/style.css",
-     "templates/thematic/Rakefile",
      "templates/thematic/extensions/_border_radius.sass",
      "templates/thematic/functions.php",
      "templates/thematic/manifest.rb",
@@ -53,7 +51,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/pengwynn/compass-wordpress}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.4}
+  s.rubygems_version = %q{1.3.5}
   s.summary = %q{Compass extenstion for creating WordPress themes using Sass}
 
   if s.respond_to? :specification_version then
