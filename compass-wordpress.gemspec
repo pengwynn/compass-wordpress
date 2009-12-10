@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland", "Adam Stacoviak"]
-  s.date = %q{2009-11-30}
+  s.date = %q{2009-12-10}
   s.description = %q{Helps you create generic WordPress themes and Thematic child themes}
   s.email = %q{wynn.netherland@gmail.com}
   s.extra_rdoc_files = [
@@ -35,6 +35,31 @@ Gem::Specification.new do |s|
      "sass/wordpress/thematic/styles/_images.sass",
      "sass/wordpress/thematic/styles/_plugins.sass",
      "sass/wordpress/thematic/styles/_typography.sass",
+     "templates/base/404.php",
+     "templates/base/LICENSE.txt",
+     "templates/base/README.txt",
+     "templates/base/_base.sass",
+     "templates/base/archive.php",
+     "templates/base/archives.php",
+     "templates/base/comments.php",
+     "templates/base/extensions/_border_radius.sass",
+     "templates/base/footer.php",
+     "templates/base/functions.php",
+     "templates/base/header.php",
+     "templates/base/image.php",
+     "templates/base/index.php",
+     "templates/base/javascript/site.js",
+     "templates/base/links.php",
+     "templates/base/manifest.rb",
+     "templates/base/page-custom.php",
+     "templates/base/page.php",
+     "templates/base/print.sass",
+     "templates/base/screen.sass",
+     "templates/base/screenshot.png",
+     "templates/base/search.php",
+     "templates/base/sidebar.php",
+     "templates/base/single.php",
+     "templates/base/style.css",
      "templates/project/manifest.rb",
      "templates/project/print.sass",
      "templates/project/readme.txt",

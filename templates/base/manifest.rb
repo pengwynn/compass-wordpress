@@ -17,7 +17,7 @@ file 'page.php'
 stylesheet 'print.sass', :media => "print"
 file 'README.txt'
 stylesheet 'screen.sass', :media => "screen, projection"
-file 'screenshot.php'
+file 'screenshot.png'
 file 'search.php'
 file 'sidebar.php'
 file 'single.php'
