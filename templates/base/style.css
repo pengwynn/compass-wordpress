@@ -1,0 +1,11 @@
+/*
+Theme Name: Base
+Theme URI: http://adamstacoviak.com
+Description: A clean Wordpress theme w/ Sass, Compass and jQuery (Based on Starkers)
+Version: 1.0
+Author: Adam Stacoviak
+Author URI: http://adamstacoviak.com
+*/
+
+@import "css/screen.css";
+@import "css/print.css";
