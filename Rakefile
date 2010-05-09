@@ -10,7 +10,7 @@ begin
     gem.email = "wynn.netherland@gmail.com"
     gem.homepage = "http://github.com/pengwynn/compass-wordpress"
     gem.authors = ["Wynn Netherland", "Adam Stacoviak"]
-    gem.add_development_dependency "compass", "~> 0.8.17"
+    gem.add_dependency "compass", ">= 0.8.17"
     gem.files = FileList["[A-Z]*", "{lib,sass,templates}/**/*"]
     
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
