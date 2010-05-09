@@ -1,12 +1,19 @@
-// Global Elements
+/* =Global Elements
+ *--------------------------------------------------------------
+
 body, input, textarea
-  font: 15px Georgia, serif
+  font: 15px Georgia,serif
   line-height: 22px
 
-p, ul, ol, dd, pre
+p, ul, ol, dd
   margin-bottom: 22px
 
-pre, code
+pre
+  margin-bottom: 22px
+  font: 14px Monaco, monospace
+  line-height: 22px
+
+code
   font: 14px Monaco, monospace
   line-height: 22px
 
@@ -38,16 +45,17 @@ hr
   height: 1px
   margin-bottom: 22px
 
-a:link
-  color: #004B91
+a
+  &:link
+    color: #004B91
+  &:visited
+    color: #743399
+  &:active, &:hover
+    color: #FF4B33
 
-a:visited
-  color: #743399
+/* =Header
+ *--------------------------------------------------------------
 
-a:active, a:hover
-  color: #FF4B33
-
-// Header
 #header
   z-index: 2
 
@@ -69,11 +77,10 @@ a:active, a:hover
   color: #666
   font-size: 13px
   font-style: italic
-  font-weight: normal
-  line-height: 1.5
-  margin: 0
 
-// Menu
+/* =Menu
+ *--------------------------------------------------------------
+
 .skip-link
   display: none
 
@@ -84,60 +91,58 @@ a:active, a:hover
   overflow: visible
   z-index: 100
 
-// ESSENTIAL STYLES
-.sf-menu, .sf-menu *
+/*** ESSENTIAL STYLES **
+
+.sf-menu
   margin: 0
   padding: 0
   list-style: none
-
-.sf-menu
+  *
+    margin: 0
+    padding: 0
+    list-style: none
   line-height: 1.0
   ul
     position: absolute
     top: -999em
-    // left offset of submenus need to match (see below)
     width: 10em
+    /* left offset of submenus need to match (see below)
     li
       width: 100%
   li
-    float: left
-    position: relative
-    // fixes IE7 'sticky bug'
     &:hover
       visibility: inherit
-    a
-      display: block
-      position: relative
+      /* fixes IE7 'sticky bug'
+    float: left
+    position: relative
+  a
+    display: block
+    position: relative
+  li
+    &:hover ul, &.sfHover ul
+      left: 0
+      top: 2.5em
+      /* match top ul list item height
+      z-index: 99
 
-.sf-menu li:hover ul,
-.sf-menu li.sfHover ul
-  left: 0
-  // match top ul list item height
-  top: 2.5em
-  z-index: 99
+ul.sf-menu li
+  &:hover li ul, &.sfHover li ul
+    top: -999em
+  li
+    &:hover ul, &.sfHover ul
+      left: 10em
+      /* match ul width
+      top: 0
+    &:hover li ul, &.sfHover li ul
+      top: -999em
+    li
+      &:hover ul, &.sfHover ul
+        left: 10em
+        /* match ul width
+        top: 0
 
-ul.sf-menu li:hover li ul,
-ul.sf-menu li.sfHover li ul
-  top: -999em
+/*** THEMATIC SKIN **
 
-ul.sf-menu li li:hover ul,
-ul.sf-menu li li.sfHover ul
-  // match ul width
-  left: 10em
-  top: 0
-
-ul.sf-menu li li:hover li ul,
-ul.sf-menu li li.sfHover li ul
-  top: -999em
-
-ul.sf-menu li li li:hover ul,
-ul.sf-menu li li li.sfHover ul
-  // match ul width
-  left: 10em
-  top: 0
-
-
-// THEMATIC SKIN
 .sf-menu
   border-right: 1px solid #ccc
   float: left
@@ -145,53 +150,63 @@ ul.sf-menu li li li.sfHover ul
     border-left: 1px solid #ccc
     border-top: 1px solid #ccc
     border-bottom: 1px solid #ccc
-    color: #666
     padding: 9px 13px
     text-decoration: none
-    // visited pseudo selector so IE6 applies text color
+  .current_page_item a, .current_page_ancestor a, .current_page_parent a
+    border-bottom-color: #fff
+  a
+    /* visited pseudo selector so IE6 applies text colour
+    color: #666
     &:visited
-      color: inherit
-  .current_page_item, .current_page_ancestor, .current_page_parent
-    a
-      border-bottom-color: #fff
+      /* visited pseudo selector so IE6 applies text colour
+      color: #666
   li
     background: #fff
     li
       background: #fff
       li
         background: #9AAEDB
-
+    &:hover, &.sfHover
+      background: #fafafa
+      outline: 0
+      border-bottom-color: #ccc
+  a
+    &:focus, &:hover, &:active
+      background: #fafafa
+      outline: 0
+      border-bottom-color: #ccc
   ul
     border-right: 1px solid #ccc
     border-bottom: 1px solid #ccc
+  li
+    &:hover ul, &.sfHover ul
+      top: 32px
+      /* overriding essential styles
+  ul
     ul
       margin-top: 0
-      a
-        background: #fafafa
-        border-bottom: none
-        &:hover
-          color: #FF4B33
-  li:hover, li.sfHover, a:focus, a:hover, a:active
-    background: #fafafa
-    outline: 0
-    border-bottom-color: #ccc
+    a
+      background: #fafafa
+      border-bottom: none
+      &:hover
+        color: #FF4B33
 
-  li:hover ul, li.sfHover ul
-    // overriding essential styles
-    top: 32px
+/* =Content
+ *--------------------------------------------------------------
 
-// Content
 #main
   clear: both
   padding: 66px 0 22px 0
-
-.attachment .page-title
-  font-style: italic
 
 .page-title
   font-size: 13px
   line-height: 18px
   padding: 0 0 44px 0
+
+.attachment .page-title
+  font-style: italic
+
+.page-title
   a
     color: #666
     text-decoration: none
@@ -230,6 +245,7 @@ ul.sf-menu li li li.sfHover ul
   font-size: 13px
   font-style: italic
   line-height: 18px
+  .author
   .n
     font-size: 11px
     font-style: normal
@@ -298,14 +314,16 @@ ul.sf-menu li li li.sfHover ul
     &:active, &:hover
       color: #FF4B33
 
-#links-page, #archives-page
-  list-style: none
-  margin-left: 0
-  overflow: hidden
-  .content-column
-    float: left
-    margin-right: 20px
-    width: 45%
+ul
+  &#links-page, &#archives-page
+    list-style: none
+    margin-left: 0
+    overflow: hidden
+
+li.content-column
+  float: left
+  margin-right: 20px
+  width: 45%
 
 .gallery
   padding: 0 0 22px 0
@@ -322,25 +340,25 @@ ul.sf-menu li li li.sfHover ul
     float: left
     margin: .3em 1em 0 0
 
-// Attachments
-.attachment-jpeg #container,
-.attachment-png #container
+/* =Attachments
+ *--------------------------------------------------------------
+
+.attachment-jpeg #container, .attachment-png #container
   width: 100%
 
-.attachment-jpeg #content,
-.attachment-png #content
+.attachment-jpeg #content, .attachment-png #content
   width: 930px
 
-.attachment-jpeg #comments,
-.attachment-png #comments
+.attachment-jpeg #comments, .attachment-png #comments
   width: 540px
   overflow: hidden
 
-.attachment-jpeg .main-aside,
-.attachment-png .main-aside
-  display: none    
+.attachment-jpeg .main-aside, .attachment-png .main-aside
+  display: none
 
-// Navigation
+/* =Navigation
+ *--------------------------------------------------------------
+
 .navigation
   color: #666
   font-size: 13px
@@ -375,15 +393,16 @@ ul.sf-menu li li li.sfHover ul
   display: block
   padding: 0 0 44px 0
 
-// Comments
-#comments,
-#comments input,
-#comments textarea
-  font-size: 13px
-  line-height: 18px
+/* =Comments
+ *--------------------------------------------------------------
 
 #comments
   padding: 22px 0 0 0
+  font-size: 13px
+  line-height: 18px
+  input, textarea
+    font-size: 13px
+    line-height: 18px
   code
     font-size: 12px
     line-height: 18px
@@ -405,20 +424,22 @@ ul.sf-menu li li li.sfHover ul
     margin: 0 0 18px 0
   li
     background: #fafafa
-    border: 1px solid #ccc
-    margin: 0 0 18px 0
+    border-bottom: 1px solid #ccc
     padding: 18px 1.5em 0 1.5em
     position: relative
     &.alt
       background: #fff
     &.bypostauthor
       background: #FFFFCC
-    &.avatar
-      position: absolute
-      top: 22px
-      left: 1.5em
-      width: 36px
-      height: 36px
+  ul li
+    border: 1px solid #ccc
+    margin: 0 0 18px 0
+  li .avatar
+    position: absolute
+    top: 22px
+    left: 1.5em
+    width: 36px
+    height: 36px
   .comment-author
     font-weight: bold
     padding: 9px 0 0 46px
@@ -456,12 +477,13 @@ ul.sf-menu li li li.sfHover ul
     text-decoration: none
     &:active, &:hover
       color: #FF4B33
-    a, span
-      margin-right: 0.5em
+    margin-right: 0.5em
+  span
+    margin-right: 0.5em
 
 #trackbacks-list .comment-content
   position: absolute
-  left: -9000px
+  left: -10000px
 
 #respond
   background: #fff
@@ -470,10 +492,11 @@ ul.sf-menu li li li.sfHover ul
   padding: 18px 0 0 0
   position: relative
 
-#comments-list #respond
-  border-bottom: 1px solid #ccc
-  margin: 0 0 18px 0
-  padding: 18px 1.5em
+#comments-list
+  #respond
+    border-bottom: 1px solid #ccc
+    margin: 0 0 18px 0
+    padding: 18px 1.5em
   ul #respond
     border: 1px solid #ccc
     margin: 0
@@ -533,33 +556,38 @@ ul.sf-menu li li li.sfHover ul
   margin: 0
   padding: 18px 0 0 0
 
+/* =Asides, Sidebars & Widget-Ready Areas
+ *--------------------------------------------------------------
 
-// Asides, Sidebars & Widget-Ready Areas
-.aside,
-.aside input
+.aside
   font-size: 13px
   line-height: 18px
   margin-bottom: 6px
-
-.aside
-  color: #666
+  input
+    font-size: 13px
+    line-height: 18px
+    margin-bottom: 6px
+  p, ul, ol, dd
+    margin-bottom: 18px
+  pre
+    margin-bottom: 18px
+    font-size: 12px
+    line-height: 18px
+  code
+    font-size: 12px
+    line-height: 18px
   .current_page_item
     a
       color: #FF4B33
-    .page_item
-      a
-        color: #666
-        &:hover, &:active
-          color: #FF4B33
-  #searchsubmit
-    display: none
-  .widget_tag_cloud
-    margin: 0 0 22px 0
-  p, ul, ol, dd, pre
-    margin-bottom: 18px
-  pre, code
-    font-size: 12px
-    line-height: 18px
+    .page_item a
+      color: #666
+      &:hover, &:active
+        color: #FF4B33
+  color: #666
+  a
+    color: #666
+    &:active, &:hover
+      color: #FF4B33
   h3
     font-size: 15px
     font-style: italic
@@ -572,41 +600,45 @@ ul.sf-menu li li li.sfHover ul
     font-weight: bold
     text-transform: uppercase
     letter-spacing: 0.05em
-  a
-    color: #666
-    &:active, &:hover
-      color: #FF4B33
   ul
     list-style: none
     margin-left: 0
-  ul ul
-    list-style: disc
-    margin: 0 0 22px 20px
-  ul ul li
-    padding: 1px 0
-  ul ul ul
-    margin-bottom: 0
-  form, table
+    ul
+      list-style: disc
+      margin: 0 0 22px 20px
+      li
+        padding: 1px 0
+      ul
+        margin-bottom: 0
+  form
     margin-bottom: 22px
   table
+    margin-bottom: 22px
     border: none
-    thead
-      border: 1px solid #ccc
-    tbody
-      border: 1px solid #ccc
-    th, td
-      border-right: 1px solid #ccc
-      padding: .25em .8em
-    tfoot
-      tr
-        border: none
-      td
-        border-color: transparent
+  thead, tbody
+    border: 1px solid #ccc
+  th, td
+    border-right: 1px solid #ccc
+    padding: .25em .8em
+  tfoot
+    tr
+      border: none
+    td
+      border-color: transparent
 
-// Main Asides
+.widget_tag_cloud
+  margin: 0 0 22px 0
+
+.aside #searchsubmit
+  display: none
+
+/*
+ *  Main Asides
+
 .main-aside
   ul
     padding: 0 20px
+  h3
   ul ul
     padding: 0
 
@@ -615,29 +647,34 @@ ul.sf-menu li li li.sfHover ul
   padding: 18px 0 0 0
   margin-bottom: 22px
 
-// Content Asides
-#content
-  .aside
-    border: 1px solid #ccc
-    margin: 0 0 22px 0
-    padding: 18px 0 0 0
-    h3
-      font-family: Georgia,serif
-      font-weight: normal
-      font-size: 17px
-      font-style: italic
-      padding: 0 0 7px 0
-      text-transform: none
-    ul
-      padding: 0 20px
-    ul ul
-      padding: 0
+/*
+ *  Content Asides
 
-// Footer Asides
+#content .aside
+  border: 1px solid #ccc
+  margin: 0 0 22px 0
+  padding: 18px 0 0 0
+  ul
+    padding: 0 20px
+  h3
+    font-family: Georgia,serif
+    font-weight: normal
+    font-size: 17px
+    font-style: italic
+    padding: 0 0 7px 0
+    text-transform: none
+  ul ul
+    padding: 0
+
+/*
+ *  Footer Asides
+
 #subsidiary
-  padding: 33px 0 0 0    
+  padding: 33px 0 0 0
 
-// Footer
+/* =Footer
+ *--------------------------------------------------------------
+
 #footer
   border-top: 1px solid #ccc
   margin-top: 22px
@@ -652,44 +689,51 @@ ul.sf-menu li li li.sfHover ul
     &:active, &:hover
       color: #FF4B33
 
-// PageNavi
-/* Using !important to override PageNavi CSS */
+/* =PageNavi
+ *--------------------------------------------------------------
 
-.wp-pagenavi
-  +global-reset
-  margin: 0
-  padding: 0
-  
+/* Using !important to override PageNavi CSS
+
 .wp-pagenavi
   margin: 0 0 0 -.5em
   padding: 0.5em 0
-  a, a:link, span
-    border: 1px solid #ccc
-    color: #666
+  a
+    border: 1px solid #ccc !important
+    color: #666!important
     font-style: normal
-    margin: 0 .375em
-    padding: 0.5em 0.25em
-  a:visited
-    border: 1px solid #ccc
-    color: #666
-  a:hover
-    border: 1px solid #ccc
-    color: #FF4B33
-  a:active
-    border: 1px solid #ccc
-    color: #FF4B33
+    margin: 0 .375em !important
+    padding: 0.5em 0.25em !important
+    &:link
+      border: 1px solid #ccc !important
+      color: #666!important
+      font-style: normal
+      margin: 0 .375em !important
+      padding: 0.5em 0.25em !important
+  span
+    border: 1px solid #ccc !important
+    color: #666!important
+    font-style: normal
+    margin: 0 .375em !important
+    padding: 0.5em 0.25em !important
+  a
+    &:visited
+      border: 1px solid #ccc !important
+      color: #666 !important
+    &:hover, &:active
+      border: 1px solid #ccc !important
+      color: #FF4B33 !important
   span
     &.pages
-      border: none
-      color: #666
-      margin: 0
-      padding: 0
+      border: none !important
+      color: #666 !important
+      margin: 0 !important
+      padding: 0 !important
     &.current
-      border: none
-      color: #666
-      font-weight: normal
-      margin: 0
-      padding: 0
+      border: none !important
+      color: #666 !important
+      font-weight: normal !important
+      margin: 0 !important
+      padding: 0 !important
     &.extend
       background-color: #FFFFFF
       border: 1px solid #000000

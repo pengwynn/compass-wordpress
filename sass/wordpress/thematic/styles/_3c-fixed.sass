@@ -1,83 +1,67 @@
-// LAYOUT: One-Column (Left) Fixed
-// DESCRIPTION: Two-column 950px fixed layout with one sidebar left of content
+/*
+ *LAYOUT: Three-Column
+ *DESCRIPTION: Three-column 950px fixed layout with two sidebars on either side of content
 
 body
-  min-width: 940px
-
+  min-width: 960px
 
 #header
   position: relative
-
 
 #branding
   width: 940px
   margin: 0 auto
 
-
 #access
   position: relative
   overflow: hidden
-
 
 .menu
   width: 940px
   margin: 0 auto
 
-
 #main
-  width: 940px
+  width: 960px
   margin: 0 auto
   overflow: hidden
   position: relative
 
-
 #container
   width: 940px
-  float: right
-  margin: 0 0 0 -310px
-
+  float: left
+  margin: 0 0 0 10px
 
 #content
-  width: 620px
+  margin: 0 240px
   overflow: hidden
-  margin: 0 0 0 320px
-
-
-.hentry
-  width: 630px
-
-
-.main-aside
-  width: 300px
-  float: left
-  position: relative
-
 
 #primary
+  width: 220px
   float: left
+  margin: 0 0 0 -940px
 
+* html #primary
+  left: 20px
+  position: relative
 
 #secondary
-  clear: left
-
+  width: 220px
+  float: left
+  margin: 0 0 0 -220px
 
 #footer
   clear: both
 
-
 #subsidiary
-  width: 940px
+  width: 960px
   margin: 0 auto
   overflow: hidden
-
   .aside
     width: 300px
     float: left
-    margin: 0 20px 0 0
-
+    margin: 0 10px 0 10px
   #third
-    margin: 0
-
+    margin: 0 0 0 10px
 
 #siteinfo
   clear: both

@@ -1,27 +1,126 @@
-!base_font_size = 16px
-!base_font_size_small = 13px
-!base_font_color = #333
-!default_border_radius = 6px
+/* -------------------------------------------------------------- 
+ *   
+ *   Set default typography based on Blueprint
+ *   
+ *   http://code.google.com/p/blueprintcss/
+ *     
+ *--------------------------------------------------------------
 
-+general-typography
-=heading-font
-  +serif-font
-=quote-font
-  +serif-font
+body, input, textarea
+  color: #000
+  font: 12px Arial,sans-serif
+  line-height: 18px
 
-body
-  font-size= !base_font_size
-  +sans-font
-  
-h1,h2,h3,h4,h5,h6
-  color: #333
+/* Headings
+ *--------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  clear: both
+
+/* Text elements
+ *--------------------------------------------------------------
+
+p
+  margin-bottom: 18px
+
+ul, ol
+  margin: 0 0 18px 2.5em
+
+ul
+  list-style: disc
+
+ol
+  list-style-type: decimal
+  ol
+    list-style: upper-alpha
+    ol
+      list-style: lower-roman
+      ol
+        list-style: lower-alpha
+
+ul ul, ol ol, ul ol, ol ul
+  margin-bottom: 0
+
+dl
+  margin: 0 1.5em
+
+dt
   font-weight: bold
-  +heading-font
+
+dd
+  margin-bottom: 18px
+
+strong
+  font-weight: bold
+
+cite, em, i
+  font-style: italic
 
 blockquote
-  +heading-font
-  font-size= !base_font_size * 1.2
-.quote blockquote
-  font-size= !h4
-  line-height= !h5 * 1.625
-  color: #555
+  margin: 0 3em
+  em, i, cite
+    font-style: normal
+
+pre
+  font: 11px Monaco, monospace
+  line-height: 18px
+  margin-bottom: 18px
+
+code
+  font: 11px Monaco, monospace
+
+abbr, acronym
+  border-bottom: 1px dotted #333
+  cursor: help
+
+ins
+  text-decoration: none
+
+sup, sub
+  height: 0
+  line-height: 1
+  vertical-align: baseline
+  position: relative
+
+sup
+  bottom: 1ex
+
+sub
+  top: .5ex
+
+/* Pullquotes
+ *--------------------------------------------------------------
+
+blockquote
+  &.left
+    float: left
+    margin-left: 0
+    margin-right: 20px
+    text-align: right
+    width: 33%
+  &.right
+    float: right
+    margin-left: 20px
+    margin-right: 0
+    text-align: left
+    width: 33%
+
+/*
+ *
+ *Adapt the following for use in your Child Themes when using
+ *different font-sizes and line-heights
+ *
+ *body, input, textarea {
+ *    font: --px Arial,sans-serif;
+ *    line-height:--px;
+ *}
+ *p, ul, ol, dd, pre {
+ *    margin-bottom:--px;
+ *}
+ *pre, code {
+ *	font:--px Monaco, monospace;
+ *	line-height:--px;
+ *}
+ *
+ *All other styles can be overridden--or ignored!--in Child Theme stylesheets

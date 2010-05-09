@@ -1,15 +1,19 @@
-// Base styles for images
+/* -------------------------------------------------------------- 
+ *   
+ *   Default styles for Images
+ *  
+ *--------------------------------------------------------------
+
 .entry-content img
   margin: 0 0 18px 0
 
 .alignleft, img.alignleft
-  +float-left
-  display: block
+  float: left
   margin-right: 20px
 
 .alignright, img.alignright
-  +float-right
   display: block
+  float: right
   margin-left: 20px
 
 .aligncenter, img.aligncenter
@@ -33,6 +37,21 @@
   margin: 0
 
 .wp-smiley
-  // Prevent the smileys from breaking line-height
+  /* Prevent the smileys from breaking line-height
   max-height: 12px
   margin: 0 !important
+
+/*
+ *
+ *Adapt the following for use in your Child Themes when using
+ *different font-sizes and line-heights
+ *
+ *.entry-content img,
+ *.wp-caption {
+ *    margin-bottom:--px;
+ *}
+ *.wp-smiley {
+ *    max-height:--px;
+ *}
+ *
+ *All other styles can be overridden--or ignored!--in Child Theme stylesheets
