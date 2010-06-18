@@ -1,27 +1,30 @@
-!base_font_size = 16px
-!base_font_size_small = 13px
-!base_font_color = #333
-!default_border_radius = 6px
+$base_font_size: 16px
+$base_font_size_small: 13px
+$base_font_color: #333333
+$default_border_radius: 6px
 
 +general-typography
+
 =heading-font
   +serif-font
+
 =quote-font
   +serif-font
 
 body
-  font-size= !base_font_size
+  font-size: $base_font_size
   +sans-font
-  
+
 h1,h2,h3,h4,h5,h6
-  color: #333
+  color: #333333
   font-weight: bold
   +heading-font
 
 blockquote
   +heading-font
-  font-size= !base_font_size * 1.2
+  font-size: $base_font_size * 1.2
+
 .quote blockquote
-  font-size= !h4
-  line-height= !h5 * 1.625
-  color: #555
+  font-size: $h4
+  line-height: $h5 * 1.625
+  color: #555555
