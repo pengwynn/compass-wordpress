@@ -1,9 +1,9 @@
 file '404.php'
 file 'archive.php'
 file 'archives.php'
-stylesheet '_base.sass'
+stylesheet '_base.scss'
 file 'comments.php'
-stylesheet 'extensions/_border_radius.sass'
+stylesheet 'extensions/_border_radius.scss'
 file 'footer.php'
 file 'functions.php'
 file 'header.php'
@@ -14,9 +14,9 @@ file 'LICENSE.txt'
 file 'links.php'
 file 'page-custom.php'
 file 'page.php'
-stylesheet 'print.sass', :media => "print"
+stylesheet 'print.scss', :media => "print"
 file 'README.txt'
-stylesheet 'screen.sass', :media => "screen, projection"
+stylesheet 'screen.scss', :media => "screen, projection"
 file 'screenshot.png'
 file 'search.php'
 file 'sidebar.php'

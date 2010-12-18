@@ -22,6 +22,12 @@ OR, just run this command:
 
     compass -r compass-wordpress -f wordpress --sass-dir=sass --css-dir=css -s compressed -p <Theme Name> /path/to/installation
 
+OR, run this command:
+
+    compass create -r compass-wordpress --using wordpress <Theme Name>
+		compass install wordpress/base --force <Theme Name>
+		compass install wordpress/thematic --force <Theme Name>
+
 What this does is call `compass`, requires the compass-wordpress extension, uses the framework wordpress, sets the sass and css directories, sets the Sass output to be compressed and finally ends with you setting the theme name.
 
 Read more details at [Wynn's blog](http://wynnnetherland.com/2009/11/sass-up-your-wordpress-themes-with-compass/).
