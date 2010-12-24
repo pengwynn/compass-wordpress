@@ -1,4 +1,2 @@
-require 'rubygems'
-gem 'compass', '~> 0.10.6'
-require 'compass'
-require File.join(File.dirname(__FILE__), 'wordpress', 'compass_extension')
+base_directory  = File.join(File.dirname(__FILE__), '..', 'wordpress')
+Compass::Frameworks.register('my_extension', :path => base_directory)

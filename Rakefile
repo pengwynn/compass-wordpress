@@ -9,9 +9,10 @@ begin
     gem.description = %Q{Helps you create generic WordPress themes and Thematic child themes}
     gem.email = "wynn.netherland@gmail.com"
     gem.homepage = "http://github.com/pengwynn/compass-wordpress"
-    gem.authors = ["Wynn Netherland", "Adam Stacoviak"]
-    gem.add_development_dependency "compass", "~> 0.10.6"
-    gem.files = FileList["[A-Z]*", "{lib,sass,templates}/**/*"]
+    gem.authors = ["Wynn Netherland", "Adam Stacoviak", "Pepijn de Vos"]
+    gem.add_dependency "compass", ">= 0.10.6"
+    #gem.files = FileList["[A-Z]*", "{lib,sass,templates}/**/*"]
+    gem.files.include "compass-wordpress/**/*"
     
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
