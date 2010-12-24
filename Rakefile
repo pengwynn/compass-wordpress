@@ -12,7 +12,7 @@ begin
     gem.authors = ["Wynn Netherland", "Adam Stacoviak", "Pepijn de Vos"]
     gem.add_dependency "compass", ">= 0.10.6"
     #gem.files = FileList["[A-Z]*", "{lib,sass,templates}/**/*"]
-    gem.files.include "compass-wordpress/**/*"
+    gem.files.include "wordpress/**/*"
     
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
