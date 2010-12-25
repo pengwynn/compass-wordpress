@@ -1,6 +1,16 @@
 require 'rubygems'
 require 'rake'
 
+def compass_version()
+  begin
+    require 'compass'
+    return ">= "+ Compass::VERSION
+  rescue LoadError
+    return ">= 0.10.6"
+  end
+end
+
+
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
@@ -10,7 +20,7 @@ begin
     gem.email = "pepijndevos@gmail.com"
     gem.homepage = "http://github.com/pepijndevos/compass-wordpress"
     gem.authors = ["Wynn Netherland", "Adam Stacoviak", "Pepijn de Vos"]
-    gem.add_dependency "compass", ">= 0.10.6"
+    gem.add_dependency "compass", compass_version
     #gem.files = FileList["[A-Z]*", "{lib,sass,templates}/**/*"]
     gem.files.include "wordpress/**/*"
     
