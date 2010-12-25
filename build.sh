@@ -5,10 +5,12 @@ svn export http://thematic.googlecode.com/svn/trunk/ thematic
 
 cp -r thematic/thematicsamplechildtheme/ wordpress/templates/project/
 echo "discover :all" >> wordpress/templates/project/manifest.rb
-sed -i '~' '/*\//,$ d' wordpress/templates/project/style.css
+sed -i '' '/*\//,$ d' wordpress/templates/project/style.css
 echo "*/
 
 @import url('stylesheets/screen.css');" >> wordpress/templates/project/style.css
+echo "
+@import 'wordpress'" >> wordpress/templates/project/screen.sass
 
 sass-convert --from css --to sass --recursive thematic/library wordpress/stylesheets
 
