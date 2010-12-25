@@ -20,3 +20,6 @@ done
 find wordpress/stylesheets/*/* | \
 	sed -E "s/.*\/([^\/]*\/[^\/]*\.sass)$/@import '\\1'/" >> \
 	wordpress/stylesheets/_wordpress.sass
+
+echo "Please edit _wordpress.sass to reflect sensible defaults."
+echo "Use Rake to build, install and publish compass-wordpress."
