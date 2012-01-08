@@ -1,1 +1,0 @@
-This is a blank WordPress theme configured to use Sass
